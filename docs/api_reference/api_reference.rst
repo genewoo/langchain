@@ -165,28 +165,33 @@ Classes
     callbacks.aim_callback.AimCallbackHandler
     callbacks.argilla_callback.ArgillaCallbackHandler
     callbacks.arize_callback.ArizeCallbackHandler
+    callbacks.arthur_callback.ArthurCallbackHandler
     callbacks.base.AsyncCallbackHandler
     callbacks.base.BaseCallbackHandler
     callbacks.base.BaseCallbackManager
     callbacks.clearml_callback.ClearMLCallbackHandler
     callbacks.comet_ml_callback.CometCallbackHandler
     callbacks.file.FileCallbackHandler
+    callbacks.flyte_callback.FlyteCallbackHandler
     callbacks.human.HumanApprovalCallbackHandler
     callbacks.human.HumanRejectedException
     callbacks.infino_callback.InfinoCallbackHandler
     callbacks.manager.AsyncCallbackManager
     callbacks.manager.AsyncCallbackManagerForChainRun
     callbacks.manager.AsyncCallbackManagerForLLMRun
+    callbacks.manager.AsyncCallbackManagerForRetrieverRun
     callbacks.manager.AsyncCallbackManagerForToolRun
     callbacks.manager.AsyncRunManager
     callbacks.manager.BaseRunManager
     callbacks.manager.CallbackManager
     callbacks.manager.CallbackManagerForChainRun
     callbacks.manager.CallbackManagerForLLMRun
+    callbacks.manager.CallbackManagerForRetrieverRun
     callbacks.manager.CallbackManagerForToolRun
     callbacks.manager.RunManager
     callbacks.mlflow_callback.MlflowCallbackHandler
     callbacks.openai_info.OpenAICallbackHandler
+    callbacks.promptlayer_callback.PromptLayerCallbackHandler
     callbacks.stdout.StdOutCallbackHandler
     callbacks.streaming_aiter.AsyncIteratorCallbackHandler
     callbacks.streaming_aiter_final_only.AsyncFinalIteratorCallbackHandler
@@ -229,6 +234,8 @@ Functions
     callbacks.aim_callback.import_aim
     callbacks.clearml_callback.import_clearml
     callbacks.comet_ml_callback.import_comet_ml
+    callbacks.flyte_callback.analyze_text
+    callbacks.flyte_callback.import_flytekit
     callbacks.infino_callback.import_infino
     callbacks.manager.env_var_is_set
     callbacks.manager.get_openai_callback
@@ -801,6 +808,8 @@ Classes
     evaluation.run_evaluators.implementations.StringRunEvaluatorInputMapper
     evaluation.run_evaluators.implementations.TrajectoryEvalOutputParser
     evaluation.run_evaluators.implementations.TrajectoryInputMapper
+    evaluation.schema.EvalChain
+    evaluation.schema.EvaluatorType
     evaluation.schema.PairwiseStringEvaluator
     evaluation.schema.StringEvaluator
 
@@ -812,6 +821,7 @@ Functions
     :toctree: evaluation
 
     evaluation.loading.load_dataset
+    evaluation.loading.load_evaluators
     evaluation.run_evaluators.implementations.get_criteria_evaluator
     evaluation.run_evaluators.implementations.get_qa_evaluator
     evaluation.run_evaluators.implementations.get_trajectory_evaluator
@@ -1348,7 +1358,7 @@ Classes
     retrievers.multi_query.LineListOutputParser
     retrievers.multi_query.MultiQueryRetriever
     retrievers.pinecone_hybrid_search.PineconeHybridSearchRetriever
-    retrievers.pupmed.PubMedRetriever
+    retrievers.pubmed.PubMedRetriever
     retrievers.remote_retriever.RemoteLangChainRetriever
     retrievers.self_query.base.SelfQueryRetriever
     retrievers.self_query.chroma.ChromaTranslator
