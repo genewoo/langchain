@@ -62,6 +62,10 @@ class StringEvaluator(Protocol):
             **kwargs: additional keyword arguments, including callbacks, tags, etc.
         Returns:
             dict: The evaluation results containing the score or value.
+                It is recommended that the dictionary contain the following keys:
+                    - score: the score of the evaluation, if applicable.
+                    - value: the string value of the evaluation, if applicable.
+                    - reasoning: the reasoning for the evaluation, if applicable.
         """
 
     async def aevaluate_strings(
@@ -83,6 +87,10 @@ class StringEvaluator(Protocol):
             **kwargs: additional keyword arguments, including callbacks, tags, etc.
         Returns:
             dict: The evaluation results containing the score or value.
+                It is recommended that the dictionary contain the following keys:
+                    - score: the score of the evaluation, if applicable.
+                    - value: the string value of the evaluation, if applicable.
+                    - reasoning: the reasoning for the evaluation, if applicable.
         """
         raise NotImplementedError(
             f"{self.__class__.__name__} hasn't implemented an "
